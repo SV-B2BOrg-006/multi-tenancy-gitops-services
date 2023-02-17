@@ -5,7 +5,7 @@
 NS="b2bi-prod"
 
 SFG_REPO=${SFG_REPO:-"cp.icr.io/cp/ibm-sfg/sfg"}
-SFG_TAG=${SFG_TAG:-"6.1.0.0"}
+SFG_TAG=${SFG_TAG:-"6.1.2.0"}
 SFG_PULLSECRECT=${SFG_PULLSECRECT:-"ibm-entitlement-key"}
 APP_RESOURCES_PVC_ENABLED=${APP_RESOURCES_PVC_ENABLED:-"true"}
 APP_DOCUMENTS_PVC_ENABLED=${APP_DOCUMENTS_PVC_ENABLED:-"true"}
@@ -23,7 +23,7 @@ INGRESS_INTERNAL_HOST_ASI="asi-${NS}."$(oc get ingress.config.openshift.io clust
 INGRESS_INTERNAL_HOST_AC="ac-${NS}."$(oc get ingress.config.openshift.io cluster -o jsonpath='{ .spec.domain }')
 INGRESS_INTERNAL_HOST_API="api-${NS}."$(oc get ingress.config.openshift.io cluster -o jsonpath='{ .spec.domain }')
 PURGE_IMG_REPO=${PURGE_IMG_REPO:-"cp.icr.io/cp/ibm-sfg/sfg-purge"}
-PURGE_IMG_TAG=${PURGE_IMG_TAG:-"6.1.0.0"}
+PURGE_IMG_TAG=${PURGE_IMG_TAG:-"6.1.2.0"}
 PURGE_PULLSECRET=${PURGE_PULLSECRET:-"ibm-entitlement-key"}
 RWX_STORAGECLASS=${RWX_STORAGECLASS:-"ibmc-file-gold"}
 
